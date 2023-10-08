@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>Search Bar</title>
+    <link href="{{ url_for('static', filename='home.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="cover">
+    <h1>Coventry Search Engine</h1>
+    <div class="container">
+        <form action="/search" method="post">
+            <input name="query" placeholder="enter your search keywords here..." type="text">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+</body>
+</html>
+

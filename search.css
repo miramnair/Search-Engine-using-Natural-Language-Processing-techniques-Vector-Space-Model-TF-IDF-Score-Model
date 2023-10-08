@@ -1,0 +1,144 @@
+h1 {
+    font-size: 20px;
+}
+
+.card {
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: box-shadow 0.2s ease-in-out;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    color: #1a0dab;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: #1a0dab;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-link {
+    color: #1a0dab;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+
+}
+
+/* Navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: lightblue;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #0069d9;
+}
+
+/* Hover effect for home button */
+button:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: darkblue
+}
+/* Center the form  */
+ .container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+/* Style the input field */
+ input[type="text"] {
+     padding: 10px;
+     border: none;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+     font-size: 1.2em;
+     width: 100%;
+     max-width: 700px;
+}
+/* Style the submit button */
+ input[type="submit"] {
+     background-color: #007bff;
+     color: #fff;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 3px;
+     font-size: 1.2em;
+     margin-left: 225px;
+     cursor: pointer;
+}
+ .no-results {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+     font-size: 20px;
+     color: darkblue;
+     margin-top: 20px;
+}
+ .container1 {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     width: 100%;
+}
+ .container2 {
+     color: black;
+     font-size: 10px;
+}
+ button{
+     background-color: #007bff;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 3px;
+     font-size: 1.2em;
+     margin-right: 10px;
+}

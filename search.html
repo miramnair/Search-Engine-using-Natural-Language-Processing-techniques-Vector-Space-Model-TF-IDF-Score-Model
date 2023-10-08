@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Engine Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+</head>
+<body>
+<div class="wrapper">
+    <h1>Coventry Search Engine</h1>
+    <div class="container">
+        <form method="post" action="/search">
+            <input type="text" name="query" placeholder="{{query}}" value="{{query}}">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div class="container1">
+
+        <button onclick="location.href='/'">Home</button>
+
+        {% if papers %}
+        <div class="container2"><h1 color="black">There are {{papers|length}} results for "{{query}}" </h1></div>
+        {% for paper in papers %}
+        <div class="card">
+            <h2 class="card-title">
+                <b>Title:</b>
+                <a class="card-link" href="{{ paper.title_link }}">{{ paper.title }}</a>
+            </h2>
+            <div class="card-description">
+                <b>Authors</b>:
+                {% for author, link in zip(paper.authors_cov, paper.author_links) %}
+                <a href="{{ link }}"> {{ author }}</a>{% if loop.last %},{% endif %}
+                {% else %} No authors found. {% endfor %}
+                {% for aut in paper.authors_noncov %}{{ aut }}{% endfor %}
+            </div>
+            <b>Published Date</b>: {{ paper.date }} <br><br>
+            <b>Abstract</b>: <span id="abstract">{{ paper.abstract | truncate(500, True, '...')}}</span>
+            <a class="card-link" href="{{ paper.title_link }}">&nbsp;<b>Read more</b> &rarr;</a>
+        </div>
+        {% endfor %} {% else %}
+
+        <div class="no-results"> No results found.....</div>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
